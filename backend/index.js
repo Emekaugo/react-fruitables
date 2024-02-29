@@ -9,9 +9,9 @@ const app = express();
 const port = 5000;
 
 mongoose
-  .connect(process.env.MONGODB_URI, {
-    // useNewUrlParser: true,
-    // useUnifiedTopology: true,
+  .connect(process.env.MONGODB_URL, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
   })
   .then(() => {
     console.log("mongodb is connected");
